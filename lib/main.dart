@@ -6,9 +6,13 @@ import 'data/resources/app_strings.dart';
 import 'data/resources/app_themes.dart';
 import 'ui/home/home_page.dart';
 import 'ui/on_boarding/on_boarding_page.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
   runApp(const ProviderScope(child: MyApp()));
 }
 
